@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
 body {
   margin: 0;
   background-color: whitesmoke;
@@ -25,5 +24,51 @@ header {
 .form-container {
   width: 40%;
   margin: 0 auto; }
+
+.input-control {
+  position: relative; }
+  .input-control .valid, .input-control .invalid {
+    position: absolute;
+    top: 0;
+    left: 102%;
+    display: block;
+    width: 280px;
+    padding: 6px 10px;
+    color: whitesmoke;
+    font-weight: 700; }
+    .input-control .valid:before, .input-control .invalid:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      position: absolute;
+      right: 100%;
+      top: 33%; }
+  .input-control .valid {
+    background-color: #59c4bc; }
+    .input-control .valid:before {
+      border-right: 7px solid #59c4bc; }
+  .input-control .invalid {
+    background-color: #e76886; }
+    .input-control .invalid:before {
+      border-right: 7px solid #e76886; }
+
+.btn-primary {
+  margin-top: 20px;
+  background-color: #14b9d5;
+  border-color: #12a5be; }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #12a5be;
+    border-color: #1091a6; }
+
+.radios-container {
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.42857143;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  padding: 6px 12px 2px;
+  background-color: white; }
 
 /*# sourceMappingURL=app.css.map */
