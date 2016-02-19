@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Santiago Lab- Prueba Técnica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="//www.santiagolab.cl/wp-content/uploads/2014/08/logo-santiagoLab-fav.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <!-- Contendrá 3 inputs: Email (texto), Color: verde y azul (radio), Numero: una lista del 1 al 3 (select) -->
+  <header>
+    <img src="img/logo-santiagoLab-negro.png" height="55" width="491" alt="">
+    <h1>Prueba técnica</h1>
+    <p>Blanca Pérez - @onlyblank</p>
+    <hr>
+  </header>
+  <section class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-12 col-sm-offset-0">
+        <form action="" id="myForm">
+          <div class="input-control form-group">
+            <div class="input-group ">
+              <div class="input-group-addon"><i class="fa fa-at"></i></div>
+              <input type="email" name="email" class="form-control" placeholder="user@ejemplo.com">
+            </div>
+          </div>
+          <div class="input-control form-group">
+            <label for="color">Escoge un color: </label>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="color" value="blue">Azul
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="color" value="green"> Verde
+              </label>
+            </div>
+          </div>
+          <div class="input-control" >
+            <select name="number" class="form-control">
+              <option value="1">Uno (1)</option>
+              <option value="2">Dos (2)</option>
+              <option value="3">Tres (3)</option>
+            </select>
+          </div>
+          <div class="form-buttons">
+            <button class="btn btn-block btn-lg btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="js/bundle.js"></script>
+</body>
+</html>
