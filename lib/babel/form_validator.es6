@@ -1,4 +1,5 @@
 var $ = require('jquery')
+require('sweetalert')
 class FormValidator{
   constructor(form) {
     this.form = document.getElementById(form)
@@ -14,7 +15,7 @@ class FormValidator{
   }
   validate(input) {
     var isValid
-    removeMessages(input)
+    this.removeMessages(input)
     if(input.attr('type') == "email"){
       if(this.validateEmail(input.val())){
         this.messageHandler(input, "Perfecto", "valid")
@@ -25,7 +26,7 @@ class FormValidator{
       }
     }
     if(input.attr('type') == "radio"){
-      if(input.length>0){
+      if ($("input[name='"+input.attr('name')+"']:checked").length > 0){
         this.messageHandler(input, "Buena elección", "valid")
         isValid = true
       }else{
@@ -59,10 +60,26 @@ class FormValidator{
     var formValid = true
     event.preventDefault()
     for (var i = 0; i < (this.form.elements.length) - 1; i++){
-      formValid = formValid && this.validate($(this.form.elements[i]))
+      console.log(i)
+      formValid = (formValid & this.validate($(this.form.elements[i])))
     }
     if(formValid){
-      // Hacer llamada ajax
+      console.log($(this.form).serializeObject() )
+      var data = $(this.form).serializeObject()
+      $.ajax({
+        url: "/user",
+        type: 'PUT',
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        statusCode: {
+          400: () => {
+            swal("Ups...", "¡Ocurrió un error!", "error");
+          },
+          200: () => {
+            swal("¡Gracias!", "Hemos recibidos tus datos", "success");
+          }
+        }
+      });
     }
   }
 }
