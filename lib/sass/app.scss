@@ -1,0 +1,48 @@
+// app.scss
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
+
+$font-open-sans: 'Open Sans', sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-lato: 'Lato', sans-serif;
+$blue-color: #14b9d5;
+$red-color: #e76886;
+$green-color:#59c4bc;
+$white-color: whitesmoke;
+$light-gray: #e5e8ed;
+$mid-gray: #e3e8ee;
+$dark-gray: #323a45;
+
+body{
+  margin: 0;
+  background-color: $light-gray;
+  color: $dark-gray;
+  font-family: $font-lato;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-lato;
+  font-weight: 300;
+}
+
+header{
+  text-align: center;
+  h1{
+    margin: 4px 0;
+  }
+  img{
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  p{
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+.form-container{
+  width: 40%;
+  margin: 0 auto;
+}
